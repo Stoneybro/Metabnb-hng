@@ -2,10 +2,19 @@ import React from 'react'
 
 const  Data = [
   {
-    img:'../src/assets/Frame 151.png',
+    img:'../src/assets/Frame 151 (4).png',
+  },
+  {
+    img:'../src/assets/Frame 151 (5).png',
+  },
+  {
+    img:'../src/assets/Frame 151 (6).png',
   },
   {
     img:'../src/assets/Frame 151 (7).png',
+  },
+  {
+    img:'../src/assets/Frame 151.png',
   },
   {
     img:'../src/assets/Frame 151 (1).png',
@@ -15,15 +24,6 @@ const  Data = [
   },
   {
     img:'../src/assets/Frame 151 (3).png',
-  },
-  {
-    img:'../src/assets/Frame 151 (4).png',
-  },
-  {
-    img:'../src/assets/Frame 151 (5).png',
-  },
-  {
-    img:'../src/assets/Frame 151 (6).png',
   },
  
 ]
