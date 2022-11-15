@@ -6,6 +6,7 @@ import Hero from './components/Hero'
 import Sponsors from './components/sponsor'
 import Cards from './components/cards'
 import NFTs from './components/NFTs'
+import Wallet from './components/Wallet'
 import Footer from './components/Footer'
 function App() {
   //const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
   <Cards />
   <NFTs />
   <Footer />
+  <Wallet />
   </>
   )
 }
