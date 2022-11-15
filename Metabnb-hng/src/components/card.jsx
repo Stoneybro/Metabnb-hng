@@ -36,7 +36,7 @@ const Card = () => {
           <div className='card-cont' key={index}>
               <img src={img} alt="img" />
               <div className="card-textone"><span>Desert king</span><span className='mbt'>1MBT per night</span></div>
-              <div className="card-texttwo"><span>2345km away</span><span>available for 2weeks stay</span></div>
+              <div className="card-texttwo"><span>2345km away</span><span className='available'>available for 2weeks stay</span></div>
                   <img src="../src/assets/Frame 59528.svg" alt="" className='stars' />
           </div>
             )

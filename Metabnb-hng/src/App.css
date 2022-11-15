@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;400;500;600;700&display=swap');
 :root{
   --primary-color: linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%);;
+}
+*{
+  font-family: 'Red Rose';
 }
 body{
   box-sizing: border-box;
   padding:0;
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
+  font-family: 'Red Rose';
 }
 .blur{
   position: fixed;
@@ -41,9 +46,10 @@ nav img{
   border: none;
   background: var(--primary-color);
   color: white;
-  padding: .5rem 1rem;
+  padding: 0.85rem 1.8rem;
   text-align: center;
   font-size: 14px;
+
 }
 .hero{
   display: flex;
@@ -52,26 +58,47 @@ nav img{
   gap: 4rem;
 }
 .hero-text-section{
-  flex: 1;
+  flex: 1.2;
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 .hero-image{
-  flex: 1;
+  flex: 0.8;
+  padding: 1rem;
 }
 .hero img{
   width: 100%;
 }
 .hero-maintext{
-  font-size: 3.5rem;
-}
+  font-size: 56px;
 
+}
+.hero-textblack{
+  color: rgba(67, 67, 67, 1);
+}
 .hero-textpurple{
-  color: purple;
+  font-weight: 700;
+  background-color: purple;
+
+  /* Create the gradient. */
+  background-image: var(--primary-color);
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 .hero-smalltext{
- font-size: 1.5rem
+ font-size: 24px;
+ font-weight: 400;
+ line-height: 1.5;
 }
 .hero-search{
   display: flex;
@@ -79,10 +106,13 @@ nav img{
 }
 .hero-search input{
   width: 55%;
-  padding: 0.5rem;
+  height: 35px;
+  padding: 0.5rem 1rem;
   border-radius: 8px 0 0 8px;
   border: 1px  #A3A3A3 solid;
   outline: none;
+  font-size: 1rem;
+  font-family: 'Red Rose';
 }
 .hero-search button{
   border-radius:0 8px 8px 0;
@@ -91,13 +121,14 @@ nav img{
   color: white;
   margin-left: -2px;
   width: 30%;
-
+  font-size: 1rem;
+  font-family: 'Red Rose';
 }
 .sponsors{
   background: var(--primary-color);
   display: flex;
   justify-content: space-between;
-  padding: 1rem 5rem;
+  padding: 1rem 7rem;
   flex-wrap: wrap;
   column-gap: 1rem;
   row-gap: 0.5rem;
@@ -105,7 +136,7 @@ nav img{
 .cards{
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  row-gap: 1rem;
   margin: 2rem 5rem;
   justify-content: space-between;
   align-items: center;
@@ -122,8 +153,9 @@ nav img{
 }
 .cards-toptext{
   font-size: 48px;
-  margin: 2rem auto 2.5rem auto;
+  margin: 3.5rem auto 3rem auto;
   text-align: center;
+  font-weight: 700;
 }
 .stars{
   width: 35%;
@@ -135,29 +167,38 @@ nav img{
   display: flex;
   background: var(--primary-color);
   align-items: center;
-  padding: 3.75rem 5rem;
+  padding: 4.75rem 5rem;
+
   color: white;
   gap: 6.5rem;
 }
+.nft-button{
+  padding: 0.65rem 1.2rem;
+  color: #A02279;
+  border-radius: 8px;
+  border: none;
+}
 .nft-text{
-  flex: 1;
+  flex: 0.7;
   gap: 2.25rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
+
 .nft-image{
-  flex: 1;
+  flex: 1.2;
 }
 .nft-image img{
   width: 100%;
 }
 .nft-maintext{
-  font-size: 3.5rem;
+  font-size: 48px;
 }
 .nft-smalltext{
-  font-size: 1.1rem;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 footer{
@@ -178,17 +219,23 @@ footer div{
 footer ul{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.3rem;
+  font-size: 18px;
 }
 footer span{
   font-size: 1.2rem;
+}
+footer li{
+  font-size: 14px;
+  color:  rgba(241, 243, 249, 1);
+
 }
 .wallet{
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-  width: 30%;
+  width: 40%;
   background-color: white;
   border-radius: 8px;
   z-index: 99;
@@ -222,6 +269,10 @@ footer span{
 .card-textone,.card-texttwo{
   display: flex;
   justify-content: space-between;
+  gap: 0.15rem;
+}
+.available{
+  text-align: right;
 }
 .mbt{
   font-weight: 700;
@@ -229,7 +280,40 @@ footer span{
 .arrow{
   margin-left: auto;
 }
-
+.menu{
+  display: none;
+}
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 36px;
+}
+.close{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.footer-logo{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3rem;
+}
+.socials{
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
 
 
 
@@ -238,7 +322,7 @@ footer span{
 
 
 @media (max-width:960px) {
-  .nav-items,.nav-button{
+  .nav-items{
     display: none;
   }
   .hero{
@@ -251,13 +335,59 @@ footer span{
   .card-cont{
     width: 40%;
   }
+  .cards-toptext{
+    padding: 0 10px;
+  }
   .nft{
     flex-direction: column;
   }
-  
+  .hero input{
+    width: 100%;
+   }
+   .menu{
+    display: block;
+      width: 25px;
+   }
+   .menu img{
+    width: 100%;
+   }
+   .wallet{
+    width: unset;
+   }
+   .wallet{
+    width: 50%;
+   }
 }
-@media (max-width:500px) {
+@media (max-width:550px) {
+.hero,.cards{
+    margin: 1rem 2rem;
+  }
+  .nft{
+    padding: 3.5rem 2rem;
+    gap: 1rem;
+  }
+  .hero{
+    text-align: center;
+  }
+  nav{
+    padding: 1.5rem 1rem;
+  }
   .cards{
     flex-direction: column;
+    margin: 1rem 1rem;
+    align-items: center;
   }
+  .card-cont{
+    width: 80%;
+  }
+  nav img{
+    width: 35%;
+   }
+   footer{
+    padding: 1rem;
+   }
+   .wallet{
+    width: unset;
+   }
+
 }
