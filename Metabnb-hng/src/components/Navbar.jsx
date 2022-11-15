@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({modal}) => {
   return (
     <nav>
         <img src="../src/assets/Group (1).svg" alt="" />
@@ -10,7 +10,7 @@ const Navbar = () => {
             <li>NFTs</li>
             <li>Community</li>
         </ul>
-        <button className='nav-button'>Connect wallet</button>
+        <button className='nav-button' onClick={modal}>Connect wallet</button>
     </nav>
   )
 }

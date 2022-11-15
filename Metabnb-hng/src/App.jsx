@@ -3,24 +3,29 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Sponsors from './components/sponsor'
-import Cards from './components/cards'
+import Sponsors from './components/Sponsors'
+import Card from './components/card'
 import NFTs from './components/NFTs'
 import Wallet from './components/Wallet'
 import Footer from './components/Footer'
 function App() {
-  //const [count, setCount] = useState(0)
-
+  const [openwallet, setopenwallet] = useState(false)
+  function modal(params) {
+    setopenwallet(!openwallet)
+  }
   return (
-  <>
-  <Navbar />
+  <div className='App'>
+
+  <Navbar modal={modal} />
   <Hero />
   <Sponsors />
-  <Cards />
+  <Card />
   <NFTs />
   <Footer />
-  <Wallet />
-  </>
+  {openwallet&&<Wallet modal={modal} />}
+  {openwallet&& <div className="blur"></div>}
+
+  </div>
   )
 }
 
