@@ -1,8 +1,18 @@
 import React from 'react'
+import Wallet from '../components/Wallet'
+import Sidebar from '../components/Sidebar'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Location from '../components/Location'
 const Places = () => {
+  const [openwallet, setopenwallet] =React.useState(false)
+  const [sidebar,setsidebar]=React.useState(false)
+  function menu(params) {
+    setsidebar(!sidebar)
+  }
+  function modal(params) {
+    setopenwallet(!openwallet)
+  }
   const  Data = [
     {
       img:'../src/assets/Frame 151.png',
@@ -56,7 +66,7 @@ const Places = () => {
   ]
   return (
     <>
-    <Navbar />
+  <Navbar modal={modal} menu={menu} />
     <Location />
     <div className='cards' >
       {Data.map(({img}, index) =>{
@@ -72,6 +82,9 @@ const Places = () => {
           )
       }
       </div>
+      { sidebar&&<Sidebar menu={menu} />}
+  {openwallet&&<Wallet modal={modal} />}
+  {openwallet&& <div className="blur"></div>}
     <Footer />
     </>
   )

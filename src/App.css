@@ -342,6 +342,20 @@ footer li{
   margin: 3rem 5rem 2rem;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+}
+.locations{
+  width: 100%;
+  overflow-x: scroll;
+}
+.locations::-webkit-scrollbar{
+  display: none;
+}
+.location-items{
+  width: 55rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .location-input{
   border: 1px solid 
@@ -361,8 +375,15 @@ footer li{
 
 
 @media (max-width:960px) {
+  .location-input{
+    margin-right: 0;
+  }
+
   .nav-items{
     display: none;
+  }
+  .location{
+
   }
   .hero{
     flex-direction: column;
@@ -428,5 +449,7 @@ footer li{
    .wallet{
     width: unset;
    }
-
+   .location{
+    margin: 3rem 2.5rem 2rem;
+  }
 }
